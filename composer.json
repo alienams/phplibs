@@ -1,11 +1,11 @@
 {
-    "name": "amir/libsams",
+    "name": "alienams/phplibs",
     "description": "Library untuk php buatan amsSOftware Developer",
     "type": "library",
     "license": "Mit",
     "autoload": {
         "psr-4": {
-            "libams\\": "src/"
+            "phplibs\\": "src/"
         }
     },
     "authors": [
