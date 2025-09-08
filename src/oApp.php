@@ -48,7 +48,7 @@ class oApp {
 	
 	public  function test()
 	{
-		return phpverion()." Ready " ;
+		return phpversion()." Ready " ;
 	}
 
 	public  function connect()
