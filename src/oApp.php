@@ -7,7 +7,7 @@ ini_set("memory_limit","1280M");
 class oApp {
 
 
-	public function __construct($idapp,$host,$udb,$pwddb,$db,$port)
+	public function __construct($idapp='',$host='127.0.0.1',$udb='root',$pwddb='',$db='',$port='3306')
 	{
 		$this->link = 0;
 		$this->cSql = '';
