@@ -1,0 +1,19 @@
+{
+    "name": "amir/libsams",
+    "description": "Library untuk php buatan amsSOftware Developer",
+    "type": "library",
+    "license": "Mit",
+    "autoload": {
+        "psr-4": {
+            "libams\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "amrSoftware",
+            "email": "amir.shee@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
