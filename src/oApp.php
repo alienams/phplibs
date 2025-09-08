@@ -3,11 +3,10 @@ namespace libams;
 
 use \PDO; //wajib jika menggunakan PDO connection
 
-ini_set("memory_limit","1280M");
 class oApp {
 
 
-	public function __construct($idapp='',$host='127.0.0.1',$udb='root',$pwddb='',$db='',$port='3306')
+	public function __construct($idapp='',$host='127.0.0.1',$udb='root',$pwddb='',$db='',$port='3306',$setmem='128M') 
 	{
 		$this->link = 0;
 		$this->cSql = '';
@@ -42,6 +41,9 @@ class oApp {
 		//	file_put_contents(dirname(__dir__,1)."/conf/config.inc.conf","userdb=".PHP_EOL , FILE_APPEND | LOCK_EX);
 		//	file_put_contents(dirname(__dir__,1)."/conf/config.inc.conf","passdb=".PHP_EOL , FILE_APPEND | LOCK_EX);
 		//}
+
+		//Setup memory awal yang digunakan
+		ini_set("memory_limit",$setmem);
 	}
 	
 	public  function test()
