@@ -14,6 +14,15 @@
             "email": "amir.shee@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {}
+    "require": {
+    "alienams/phplibs": "dev-main"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/alienams/phplibs.git"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
