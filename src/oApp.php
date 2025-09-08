@@ -21,10 +21,10 @@ class oApp {
 		$this->oData= [];
 
 		set_exception_handler(function($e) {
-    	http_response_code(200);
-    	header('Content-Type: application/json');
-    	echo json_encode(["status" => 0, "msg" => "Fatal error: " . $e->getMessage()]);
-    	exit;
+    	 	http_response_code(200);
+    		header('Content-Type: application/json');
+    		echo json_encode(["status" => 0, "msg" => "Fatal error: " . $e->getMessage()]);
+    		exit;
 		});
 
 		if ( ! file_exists('conf'))
@@ -32,16 +32,16 @@ class oApp {
 			mkdir("conf",0775,true);	
 		}
 
-		if ( ! file_exists(dirname(__dir__,1)."/conf/config.inc.conf") )
-		{
-			$fo = fopen(dirname(__dir__,1)."/conf/config.inc.conf","w");
-			fclose($fo);
-			file_put_contents(dirname(__dir__,1)."/conf/config.inc.conf","host=localhost".PHP_EOL , FILE_APPEND | LOCK_EX);
-			file_put_contents(dirname(__dir__,1)."/conf/config.inc.conf","db=".PHP_EOL , FILE_APPEND | LOCK_EX);
-			file_put_contents(dirname(__dir__,1)."/conf/config.inc.conf","port=3306".PHP_EOL , FILE_APPEND | LOCK_EX);
-			file_put_contents(dirname(__dir__,1)."/conf/config.inc.conf","userdb=".PHP_EOL , FILE_APPEND | LOCK_EX);
-			file_put_contents(dirname(__dir__,1)."/conf/config.inc.conf","passdb=".PHP_EOL , FILE_APPEND | LOCK_EX);
-		}
+		//if ( ! file_exists(dirname(__dir__,1)."/conf/config.inc.conf") )
+		//{
+		//	$fo = fopen(dirname(__dir__,1)."/conf/config.inc.conf","w");
+		//	fclose($fo);
+		//	file_put_contents(dirname(__dir__,1)."/conf/config.inc.conf","host=localhost".PHP_EOL , FILE_APPEND | LOCK_EX);
+		//	file_put_contents(dirname(__dir__,1)."/conf/config.inc.conf","db=".PHP_EOL , FILE_APPEND | LOCK_EX);
+		//	file_put_contents(dirname(__dir__,1)."/conf/config.inc.conf","port=3306".PHP_EOL , FILE_APPEND | LOCK_EX);
+		//	file_put_contents(dirname(__dir__,1)."/conf/config.inc.conf","userdb=".PHP_EOL , FILE_APPEND | LOCK_EX);
+		//	file_put_contents(dirname(__dir__,1)."/conf/config.inc.conf","passdb=".PHP_EOL , FILE_APPEND | LOCK_EX);
+		//}
 	}
 	
 	public  function test()
