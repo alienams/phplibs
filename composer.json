@@ -1,28 +1,18 @@
 {
-    "name": "alienams/phplibs",
-    "description": "Library untuk php buatan amsSOftware Developer",
-    "type": "library",
-    "license": "Mit",
-    "autoload": {
-        "psr-4": {
-            "phplibs\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "amrSoftware",
-            "email": "amir.shee@gmail.com"
-        }
-    ],
-    "require": {
-    "alienams/phplibs": "dev-main"
-  },
-  "repositories": [
+  "name": "alienams/phplibs",
+  "description": "Kumpulan class PHP pribadi untuk kebutuhan project.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
     {
-      "type": "vcs",
-      "url": "https://github.com/alienams/phplibs.git"
+      "name": "Amir Hamzah",
+      "email": "youremail@example.com"
     }
   ],
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "autoload": {
+    "psr-4": {
+      "Libams\\": "src/"
+    }
+  }
 }
