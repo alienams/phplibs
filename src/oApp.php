@@ -158,7 +158,7 @@ class oApp {
 
 	public function build_sql_bulk()
 	{
-		
+		return $this->exec_bulk_sql = implode(";\n",$this->bulksql);
 	}
 
 
