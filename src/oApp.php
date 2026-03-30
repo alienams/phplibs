@@ -19,6 +19,7 @@ class oApp {
 		$this->dsn='';
 		$this->oData= [];
 		$this->bulksql = [];
+		$this->exec_bulk_sql=[];
 
 		set_exception_handler(function($e) {
     	 	http_response_code(200);
@@ -154,6 +155,11 @@ class oApp {
 		}
 
 	} #end to_sql 
+
+	public function build_sql_bulk()
+	{
+		
+	}
 
 
 	public  function ptable_to_array($sql)
