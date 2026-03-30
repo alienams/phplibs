@@ -18,6 +18,7 @@ class oApp {
 		$this->idapp= isset($idapp) ? $idapp : '';
 		$this->dsn='';
 		$this->oData= [];
+		$this->bulksql = [];
 
 		set_exception_handler(function($e) {
     	 	http_response_code(200);
