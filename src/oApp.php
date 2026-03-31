@@ -306,7 +306,8 @@ class oApp {
 			
 		}else
 		{
-			return json_encode(array("id"=>"","msg":"Gagal konek keserver","status"=>0));
+			$resp = array("id"=>"","msg"=>"Gagal konek keserver","status"=>"0");
+			return json_encode($resp);
 		}
 	}
 
