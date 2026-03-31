@@ -303,7 +303,7 @@ class oApp {
 			
 		}else
 		{
-			return json_encode(array("id"=>"","msg":"Gagal medapatkan kode uniq","status"=>0));
+			return json_encode(array("id"=>"","msg":"Gagal konek keserver","status"=>0));
 		}
 	}
 
