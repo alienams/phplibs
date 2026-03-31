@@ -302,7 +302,9 @@ class oApp {
 	{
 		if ( $this->connect() )
 		{
-			$sqlid = "call get_document_id('$iddoc','$kcabang','$userid',$nlencounter)";
+			$sqlid = "select get_document_id('$iddoc','$kcabang','$userid',$nlencounter) as iddocument";
+			$ids = $this->ptable_to_object($sqlid) ;
+			return $ids[0]->iddocument;
 			
 		}else
 		{
