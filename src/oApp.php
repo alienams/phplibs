@@ -295,4 +295,16 @@ class oApp {
 		return date("Y-m-d",strtotime($xdate));
 	}
 
+	public function get_id_trx($iddoc='DOC',$kcabang='',$userid='WEB',$nlencounter=1)
+	{
+		if ( $this->connect() )
+		{
+			$sqlid = "call get_document_id('$iddoc','$kcabang','$userid',$nlencounter)";
+			
+		}else
+		{
+			return json_encode(array("id"=>"","msg":"Gagal medapatkan kode uniq","status"=>0));
+		}
+	}
+
 } #ENd of Classs
