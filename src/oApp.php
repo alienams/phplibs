@@ -313,4 +313,13 @@ class oApp {
 		}
 	}
 
+	public function reset_trx_id($id='')
+	{
+		$sql = "delete from counterid where getid='$id'";
+		if ( $this->connect() )
+		{
+			$this->link->query($sql );
+		}
+	}
+
 } #ENd of Classs
