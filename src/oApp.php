@@ -46,6 +46,9 @@ class oApp {
 
 		//Setup memory awal yang digunakan
 		ini_set("memory_limit",$setmem);
+
+		//Bentuk property koneksi  ke data base 
+		$this->connect();
 	}
 	
 	public  function test()
